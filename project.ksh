@@ -6,7 +6,7 @@ function createDatabase {
             while true ; do
             	if [[ -d $name ]]; then
             		read name?"Database already exists. Please enter a new databasename:  "
-            	elif ! [[  $name =~ ^[a-zA-Z0-9]+$ ]]; then                
+            	elif ! [[  $name =~ ^[a-zA-Z][a-zA-Z0-9]*$ ]]; then                
                		read name?"invalid database name. Please enter a valid database name:  "
             	else
                 	mkdir $name
@@ -106,7 +106,7 @@ function createTable {
     colNames=""
 
     read tableName?"Please enter table name you want to create:  "
-    if [[ ! $tableName =~ ^[a-zA-Z0-9]+$ ]]; then
+    if [[ ! $tableName =~ ^[a-zA-Z][a-zA-Z0-9]*$ ]]; then
         print "Wrong name. Name should only contain alphanumeric characters."
         return 1
     fi
@@ -124,7 +124,7 @@ function createTable {
             	read colName?"Please enter the column name number $i :  "
             	if [[ $colNames == *"$colName"* ]]; then
                 	print "Column name already used. Please enter a unique name."
-            	elif ! [[  $colName =~ ^[a-zA-Z0-9]+$ ]]; then
+            	elif ! [[  $colName =~ ^[a-zA-Z][a-zA-Z0-9]*$ ]]; then
                 	print "Wrong column name, Name must only contain alphanumeric characters. Please enter again."
             	else
                 	colNames+=" $colName"
