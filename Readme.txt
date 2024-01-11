@@ -5,7 +5,7 @@ The Project aim to develop DBMS, that will enable users to store and retrieve th
 
 The Project Features: 
 
-The Application will be CLI Menu based app, that will provide to user this Menu items: 
+The Application is CLI Menu based app, that provides to user this Menu items: 
 
 Main Menu: 
 
@@ -19,7 +19,7 @@ Main Menu:
 
  
 
-Upon user Connect to Specific Database, there will be new Screen with this Menu: 
+Upon user Connect to Specific Database, there a new screen appears with this Menu: 
 
 - Create Table  
 
